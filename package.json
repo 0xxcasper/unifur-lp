@@ -123,7 +123,7 @@
     "rimraf": "^5.0.0",
     "rollup-plugin-visualizer": "^5.9.0",
     "sass": "1.54.9",
-    "semantic-release": "19.0.5",w
+    "semantic-release": "19.0.5",
     "standard-version": "9.5.0",
     "stylelint": "^15.3.0",
     "ts-node": "^10.9.1",
