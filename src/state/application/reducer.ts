@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ApplicationState } from './types';
 
 export const initialState: ApplicationState = {
-  isDark: true,
+  isDark: false,
 };
 
 const appSlice = createSlice({

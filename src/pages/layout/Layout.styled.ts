@@ -1,6 +1,5 @@
-import styled, { css } from 'styled-components';
-import px2rem from '@/utils/px2rem';
-import { BREAKPOINTS, MediaQueryBuilder } from '@/theme';
+import styled from 'styled-components';
+import { BREAKPOINTS } from '@/theme';
 
 const PADDING = {
   SMALL: '16px',
@@ -26,19 +25,10 @@ const Container = styled.div`
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  padding-top: ${px2rem(12)};
-`;
-
-const ContentWrapperLG = css`
-  max-width: 100vw;
-`;
-
-const ContentWrapper = styled.div`
-  display: flex;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: ${px2rem(2268)};
-  ${MediaQueryBuilder('lg', ContentWrapperLG)}
+  max-width: 1920px;
 `;
 
-export { Container, ContentWrapper, LayoutPadding };
+export { Container, LayoutPadding };
