@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components';
+import { opacify } from '@/theme/utils';
 
 export const colors = {
   white: '#FFFFFF',
@@ -66,14 +67,10 @@ export const darkTheme = {
   'txt-error': commonTheme.red.A,
   'txt-highlight': commonTheme.yellow.C,
   'txt-parallel': commonTheme.dark['100'],
-
-  'txt-1': commonTheme.dark['100'],
+  'txt-parallel-1': opacify(25, commonTheme.dark['100']),
 
   'border-primary': commonTheme.dark['60'],
   'border-secondary': commonTheme.yellow.C,
-
-  'loader-primary': commonTheme.blue.A,
-  'loader-secondary': commonTheme.blue.B,
 };
 
 export const lightTheme = {
@@ -87,13 +84,10 @@ export const lightTheme = {
   'txt-error': commonTheme.red.A,
   'txt-highlight': commonTheme.yellow['A'],
   'txt-parallel': commonTheme.light['100'],
-  'txt-1': commonTheme.light['100'],
+  'txt-parallel-1': opacify(90, commonTheme.light['100']),
 
   'btn-primary': commonTheme.blue.A,
 
   'border-primary': commonTheme.dark['10'],
   'border-secondary': commonTheme.blue.A,
-
-  'loader-primary': commonTheme.blue.A,
-  'loader-secondary': commonTheme.blue.B,
 };

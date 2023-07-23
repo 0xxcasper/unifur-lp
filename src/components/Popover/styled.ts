@@ -72,7 +72,6 @@ const Wrapper = styled.div<{ show?: boolean }>`
     background: ${({ theme }) => theme['btn-primary']};
     .element {
       p {
-        color: ${({ theme }) => theme['txt-1']};
       }
 
       .arrow {

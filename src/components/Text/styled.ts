@@ -45,6 +45,9 @@ const BaseText = styled.p<{
   &.size-72 {
     font-size: ${px2rem(72)};
   }
+  &.size-88 {
+    font-size: ${px2rem(88)};
+  }
   &.size-96 {
     font-size: ${px2rem(96)};
   }
