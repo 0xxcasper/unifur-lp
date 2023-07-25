@@ -1,16 +1,30 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { LayoutPadding } from '@/pages/layout';
 import px2rem from '@/utils/px2rem';
+import { MediaQueryBuilder } from '@/theme';
+
+const ContainerXL = css`
+  flex-direction: column;
+  gap: 40px;
+  max-width: none;
+`;
 
 const Container = styled(LayoutPadding)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 30px;
   gap: 240px;
+  max-width: 1480px;
+  margin-left: auto;
+  margin-right: auto;
+  ${MediaQueryBuilder('xl', ContainerXL)}
 `;
 
+const BookingInfoXL = css`
+  max-width: 100%;
+`;
 const BookingInfo = styled.div`
   max-width: 30%;
   .link {
@@ -21,15 +35,21 @@ const BookingInfo = styled.div`
       margin-left: 12px;
     }
   }
+  ${MediaQueryBuilder('xl', BookingInfoXL)}
+`;
+
+const BookingCategoriesLG = css`
+  min-width: 100%;
+  gap: 12px;
 `;
 
 const BookingCategories = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(7, 80px);
   grid-auto-rows: auto;
-  min-width: 600px;
   gap: 38px;
+  max-width: 700px;
+  ${MediaQueryBuilder('lg', BookingCategoriesLG)}
 
   .item-one {
     background: #556652;
@@ -44,13 +64,13 @@ const BookingCategories = styled.div`
 
   .item-three {
     background: rgba(36, 36, 36, 1);
-    grid-area: 5 / 1 / 6 / 2;
+    grid-area: 4 / 1 / 4 / 2;
   }
 
   .item-four {
     background: #556652;
     box-shadow: 36px 50px 75px 0 rgba(69, 96, 64, 0.22);
-    grid-area: 4 / 2 / 5 / 3;
+    grid-area: 3 / 2 / 5 / 3;
   }
 `;
 

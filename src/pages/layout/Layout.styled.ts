@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { BREAKPOINTS } from '@/theme';
 
-const PADDING = {
+export const PADDING = {
   SMALL: '16px',
   MEDIUM: '32px',
   LARGE: '60px',
