@@ -1,11 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import px2rem from '@/utils/px2rem';
 import Text from '@/components/Text';
+import { MediaQueryBuilder } from '@/theme';
 
+const ContainerXS = css`
+  padding: 32px 24px;
+`;
 const Container = styled.div`
   background-color: rgba(45, 50, 43, 1);
   margin-top: 100px;
   padding: 52px 68px;
+  ${MediaQueryBuilder('xs', ContainerXS)}
 `;
 
 const ContactList = styled.div`
@@ -47,11 +52,16 @@ const ContentText = styled(Text)`
   color: #abadaa;
 `;
 
+const SocialListXS = css`
+  gap: ${px2rem(24)};
+`;
 const SocialList = styled.div`
   display: flex;
   flex-direction: row;
   gap: ${px2rem(70)};
   margin-top: ${px2rem(16)};
+  flex-wrap: wrap;
+  ${MediaQueryBuilder('xs', SocialListXS)}
 `;
 
 const SocialItem = styled.div`

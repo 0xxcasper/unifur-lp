@@ -26,14 +26,26 @@ const ProcessListXL = css`
   max-width: 100%;
 `;
 
+const ProcessListXS = css`
+  max-width: 100%;
+  .item {
+    width: 70vw;
+  }
+
+  .item-secondary {
+    margin-left: 16px;
+  }
+`;
+
 const ProcessList = styled.div`
   gap: 38px;
   display: flex;
   flex-direction: column;
   ${MediaQueryBuilder('xl', ProcessListXL)}
+  ${MediaQueryBuilder('xs', ProcessListXS)}
   .item {
     color: white;
-    width: 500px;
+    //width: 500px;
     padding: 16px;
     border-radius: 36px;
     cursor: pointer;
