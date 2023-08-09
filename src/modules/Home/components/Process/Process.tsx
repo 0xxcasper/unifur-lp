@@ -3,32 +3,47 @@ import Text from '@/components/Text';
 import { ArrowRight } from 'react-bootstrap-icons';
 import React from 'react';
 import Link from '@/modules/Home/components/Link.styled';
+import useScrollToID from '@/hooks/useScrollToID';
 
 interface IProcess {
   title: string;
+  id: string;
 }
 const PROCESS_LIST: IProcess[] = [
   {
     title: 'Gửi yêu cầu',
+    id: 'booking',
   },
   {
     title: 'Nhận báo giá',
+    id: 'booking',
   },
   {
     title: 'Thiết kế',
+    id: 'faq',
   },
   {
     title: 'Sản xuất tại xưởng',
+    id: 'faq',
   },
   {
     title: 'Giao Hàng',
+    id: 'faq',
   },
 ];
 
 const Process = () => {
+  const { onScroll } = useScrollToID();
+
   const renderProcess = (item: IProcess, index: number) => {
     return (
-      <div key={item.title} className={`item ${index % 2 === 1 ? 'item-primary' : 'item-secondary'}`}>
+      <div
+        key={item.title}
+        className={`item ${index % 2 === 1 ? 'item-primary' : 'item-secondary'}`}
+        onClick={() => {
+          onScroll(item.id);
+        }}
+      >
         <Text color="txt-parallel" align="center" size="24">
           {item.title}
         </Text>

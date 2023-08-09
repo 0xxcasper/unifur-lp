@@ -18,7 +18,7 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  margin-top: 72px;
+  margin-top: 32px;
 `;
 
 const Content = styled(LayoutPadding)`

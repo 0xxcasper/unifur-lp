@@ -1,8 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import Text from '@/components/Text';
-import { Container, AccordionIcon } from '@/components/Accordion/styled';
-import { ArrowDown } from 'react-bootstrap-icons';
+import { Container } from '@/components/Accordion/styled';
 
 type Props = {
   header?: ReactNode;
@@ -31,9 +30,6 @@ const AccordionComponent = ({ header, headerComp, content, className }: Props) =
                     {header}
                   </Text>
                 )}
-            <AccordionIcon>
-              <ArrowDown />
-            </AccordionIcon>
           </Accordion.Header>
           <Accordion.Body className="accordion_body">{content}</Accordion.Body>
         </Accordion.Item>
