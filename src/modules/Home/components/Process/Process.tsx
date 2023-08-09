@@ -2,6 +2,7 @@ import * as S from './styled';
 import Text from '@/components/Text';
 import { ArrowRight } from 'react-bootstrap-icons';
 import React from 'react';
+import Link from '@/modules/Home/components/Link.styled';
 
 interface IProcess {
   title: string;
@@ -36,19 +37,19 @@ const Process = () => {
   };
 
   return (
-    <S.Container style={{ marginTop: 60 }}>
+    <S.Container>
       <S.ProcessList>{PROCESS_LIST.map(renderProcess)}</S.ProcessList>
-      <div>
+      <S.Content>
         <Text size="56" fontWeight="medium">
           Quy trình thực hiện
         </Text>
         <Text size="20" color="txt-secondary" className="mt-24 mb-24">
           Chỉ với 5 bước đơn giản, Quý khách sẽ sở hữu ngay món nội thất yêu thích của mình.
         </Text>
-        <a href="https://unifur.store/pages/about-us" target="_blank" className="link">
+        <Link href="https://unifur.store/pages/about-us" target="_blank">
           Gửi yêu cầu <ArrowRight />
-        </a>
-      </div>
+        </Link>
+      </S.Content>
     </S.Container>
   );
 };

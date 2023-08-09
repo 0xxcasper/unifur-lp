@@ -3,14 +3,8 @@ import px2rem from '@/utils/px2rem';
 import Text from '@/components/Text';
 import { MediaQueryBuilder } from '@/theme';
 
-const ContainerXS = css`
-  padding: 32px 24px;
-`;
 const Container = styled.div`
   background-color: rgba(45, 50, 43, 1);
-  margin-top: 100px;
-  padding: 52px 68px;
-  ${MediaQueryBuilder('xs', ContainerXS)}
 `;
 
 const ContactList = styled.div`
@@ -49,19 +43,24 @@ const WorkingTimeList = styled.div`
 
 const ContentText = styled(Text)`
   font-size: ${px2rem(20)};
-  color: #abadaa;
+  color: white;
 `;
 
 const SocialListXS = css`
   gap: ${px2rem(24)};
+  padding: 24px;
 `;
 const SocialList = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  max-width: 1580px;
+  margin-left: auto;
+  margin-right: auto;
   gap: ${px2rem(70)};
-  margin-top: ${px2rem(16)};
   flex-wrap: wrap;
-  ${MediaQueryBuilder('xs', SocialListXS)}
+  padding: 32px 68px;
+  ${MediaQueryBuilder('md', SocialListXS)}
 `;
 
 const SocialItem = styled.div`

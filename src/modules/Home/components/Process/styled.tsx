@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { LayoutPadding } from '@/pages/layout';
 import { MediaQueryBuilder } from '@/theme';
 
-const ContainerXL = css`
+const ContainerMD = css`
   flex-direction: column;
   gap: 40px;
   margin-top: 24px;
@@ -16,11 +16,14 @@ const Container = styled(LayoutPadding)`
   justify-content: space-between;
   padding-top: 30px;
   gap: 240px;
-  max-width: 1480px;
+  max-width: 1580px;
   margin-left: auto;
   margin-right: auto;
-  ${MediaQueryBuilder('xl', ContainerXL)}
+  margin-top: 72px;
+  ${MediaQueryBuilder('md', ContainerMD)}
 `;
+
+const Content = styled.div``;
 
 const ProcessListXL = css`
   max-width: 100%;
@@ -29,7 +32,7 @@ const ProcessListXL = css`
 const ProcessListXS = css`
   max-width: 100%;
   .item {
-    width: 70vw;
+    width: 80vw !important;
   }
 
   .item-secondary {
@@ -45,7 +48,7 @@ const ProcessList = styled.div`
   ${MediaQueryBuilder('xs', ProcessListXS)}
   .item {
     color: white;
-    //width: 500px;
+    width: 500px;
     padding: 16px;
     border-radius: 36px;
     cursor: pointer;
@@ -64,4 +67,4 @@ const ProcessList = styled.div`
   }
 `;
 
-export { Container, ProcessList };
+export { Container, Content, ProcessList };

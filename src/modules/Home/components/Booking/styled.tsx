@@ -3,7 +3,7 @@ import { LayoutPadding } from '@/pages/layout';
 import px2rem from '@/utils/px2rem';
 import { MediaQueryBuilder } from '@/theme';
 
-const ContainerXL = css`
+const ContainerLG = css`
   flex-direction: column;
   gap: 40px;
   max-width: none;
@@ -16,10 +16,10 @@ const Container = styled(LayoutPadding)`
   justify-content: space-between;
   padding-top: 30px;
   gap: 240px;
-  max-width: 1480px;
+  max-width: 1580px;
   margin-left: auto;
   margin-right: auto;
-  ${MediaQueryBuilder('xl', ContainerXL)}
+  ${MediaQueryBuilder('lg', ContainerLG)}
 `;
 
 const BookingInfoXL = css`
@@ -27,14 +27,6 @@ const BookingInfoXL = css`
 `;
 const BookingInfo = styled.div`
   max-width: 30%;
-  .link {
-    color: rgba(85, 102, 82, 1);
-    font-size: 24px;
-    line-height: 150%;
-    svg {
-      margin-left: 12px;
-    }
-  }
   ${MediaQueryBuilder('xl', BookingInfoXL)}
 `;
 
@@ -46,11 +38,8 @@ const BookingCategoriesLG = css`
 const BookingCategories = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
-  gap: 38px;
-  max-width: 700px;
-  ${MediaQueryBuilder('lg', BookingCategoriesLG)}
-
+  gap: 42px;
+  max-width: 550px;
   .item-one {
     background: #556652;
     box-shadow: 36px 50px 75px 0 rgba(69, 96, 64, 0.22);
@@ -72,6 +61,8 @@ const BookingCategories = styled.div`
     box-shadow: 36px 50px 75px 0 rgba(69, 96, 64, 0.22);
     grid-area: 3 / 2 / 5 / 3;
   }
+
+  ${MediaQueryBuilder('lg', BookingCategoriesLG)}
 `;
 
 const CategoryItem = styled.div`

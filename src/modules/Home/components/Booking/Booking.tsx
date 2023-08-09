@@ -7,6 +7,7 @@ import ICDelivery from '@/components/Icons/Ic_Delivery.svg';
 import ICPencil from '@/components/Icons/colored-pencils.png';
 import ICIdea from '@/components/Icons/idea.png';
 import React from 'react';
+import Link from '@/modules/Home/components/Link.styled';
 
 interface ICategory {
   title: string;
@@ -59,9 +60,9 @@ const Booking = () => {
         <Text size="20" color="txt-secondary" className="mt-24 mb-24">
           UNIFUR.store chú trọng tính cá nhân hóa trong thiết kế và mức độ hoàn thiện của từng sản phẩm.
         </Text>
-        <a href="https://unifur.store/pages/about-us" target="_blank" className="link">
+        <Link href="https://unifur.store/pages/about-us" target="_blank">
           Liên hệ UNIFUR.store <ArrowRight />
-        </a>
+        </Link>
       </S.BookingInfo>
       <S.BookingCategories>{CATEGORIES.map(renderItem)}</S.BookingCategories>
     </S.Container>
