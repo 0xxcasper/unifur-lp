@@ -15,6 +15,10 @@ const Container = styled.div`
   flex-direction: column;
   padding-bottom: ${px2rem(160)};
   ${MediaQueryBuilder('md', ContainerMD)}
+  background-image: url(${BGImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   margin-top: 72px;
 `;
 
@@ -28,14 +32,7 @@ const Content = styled(LayoutPadding)`
   margin-right: auto;
 `;
 
-const Form = styled.form`
-  background-image: url(${BGImage});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  margin-left: auto;
-  margin-right: auto;
-`;
+const Form = styled.form``;
 
 const FormContent = styled.div`
   display: flex;

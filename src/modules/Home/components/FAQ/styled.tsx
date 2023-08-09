@@ -37,6 +37,12 @@ const AccordionWrapper = styled.div`
   width: 100%;
   margin-top: 72px;
   max-width: 70%;
+  ${MediaQueryBuilder(
+    'md',
+    css`
+      max-width: 100%;
+    `,
+  )}
 `;
 
 export { Container, Content, AccordionWrapper };
