@@ -92,7 +92,7 @@ const ColorItem = styled.div`
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  gap: 12px;
+  gap: 16px;
   flex: 1;
   :hover {
     opacity: 0.8;
@@ -100,7 +100,7 @@ const ColorItem = styled.div`
 `;
 
 const ColorImage = styled.img<{ small: boolean }>`
-  width: 70%;
+  width: 50%;
   max-width: ${props => (props.small ? '150px' : '300px')};
   height: ${props => (props.small ? '35px' : '70px')};
   border-radius: 4px;

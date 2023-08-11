@@ -55,7 +55,9 @@ const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) =
         }}
       >
         <S.ColorImage src={item.image} small={false} />
-        <Text fontWeight="semibold">{item.name}</Text>
+        <Text fontWeight="semibold" size="14">
+          {item.name}
+        </Text>
       </S.ColorItem>
     );
   };
