@@ -1,6 +1,5 @@
 import * as S from '@/modules/Home/components/Input/styled';
 import React from 'react';
-import { SubLabel } from '@/modules/Home/components/Input/styled';
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;

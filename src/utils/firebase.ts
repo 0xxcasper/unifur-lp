@@ -34,6 +34,7 @@ export interface IFormValues {
   deep: string;
   height: string;
   color: string;
+  colorImage: string;
   number: string;
   description: string;
   imageLink: string;

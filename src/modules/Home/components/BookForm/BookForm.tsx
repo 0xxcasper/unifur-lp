@@ -1,10 +1,11 @@
 import * as S from '@/modules/Home/components/BookForm/styled';
 import Text from '@/components/Text';
 import { useFormik } from 'formik';
-import { Input } from '@/modules/Home/components/Input';
+import { Input, Colors } from '@/modules/Home/components/Input';
 import { addData, IFormValues } from '@/utils/firebase';
 import toast from 'react-hot-toast';
 import React from 'react';
+import { IColor } from '@/modules/Home/components/Input/Colors';
 
 const BookForm = () => {
   const validateForm = (values: IFormValues): Record<string, string> => {
@@ -73,6 +74,7 @@ const BookForm = () => {
       deep: '',
       height: '',
       color: '',
+      colorImage: '',
       number: '',
       description: '',
       imageLink: '',
@@ -122,7 +124,18 @@ const BookForm = () => {
               />
             </S.Row>
             <S.Row>
-              <Input id="color" label="Màu sắc" onChange={handleChange} error={touched.color && errors.color} />
+              <Colors
+                label="Màu sắc"
+                error={touched.color && errors.color}
+                onChange={(item: IColor) => {
+                  formik.setFieldValue('color', item.name);
+                  formik.setFieldValue('colorImage', item.image);
+                }}
+                selectedColor={{
+                  name: formik.values.color,
+                  image: formik.values.colorImage,
+                }}
+              />
               <Input id="number" label="Số lượng" onChange={handleChange} error={touched.number && errors.number} />
             </S.Row>
             <Input

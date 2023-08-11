@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import Text from '@/components/Text';
 import { Container } from '@/components/Accordion/styled';
+import ArrowDown from '@/components/Icons/ArrowDown.svg';
 
 type Props = {
   header?: ReactNode;
@@ -30,6 +31,7 @@ const AccordionComponent = ({ header, headerComp, content, className }: Props) =
                     {header}
                   </Text>
                 )}
+            <img src={ArrowDown} width="16px" />
           </Accordion.Header>
           <Accordion.Body className="accordion_body">{content}</Accordion.Body>
         </Accordion.Item>
