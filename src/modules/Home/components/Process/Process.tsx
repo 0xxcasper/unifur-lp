@@ -55,13 +55,13 @@ const Process = () => {
     <S.Container>
       <S.ProcessList>{PROCESS_LIST.map(renderProcess)}</S.ProcessList>
       <S.Content>
-        <Text size="56" fontWeight="medium">
+        <Text size="56" fontWeight="semibold">
           Quy trình thực hiện
         </Text>
         <Text size="20" color="txt-secondary" className="mt-24 mb-24">
           Chỉ với 5 bước đơn giản, Quý khách sẽ sở hữu ngay món nội thất yêu thích của mình.
         </Text>
-        <Link href="https://unifur.store/pages/about-us" target="_blank">
+        <Link onClick={() => onScroll('booking')}>
           Gửi yêu cầu <ArrowRight />
         </Link>
       </S.Content>

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import BGImage from '@/images/faq.jpeg';
+import BGImage from '@/images/faq1.jpeg';
 import { LayoutPadding } from '@/pages/layout';
 import px2rem from '@/utils/px2rem';
 import { MediaQueryBuilder } from '@/theme';
@@ -36,7 +36,10 @@ const AccordionWrapper = styled.div`
   flex: 1;
   width: 100%;
   margin-top: 72px;
-  max-width: 70%;
+  max-width: 65%;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 32px;
+  border-radius: 12px;
   ${MediaQueryBuilder(
     'md',
     css`

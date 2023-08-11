@@ -12,7 +12,7 @@ const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
-  padding-bottom: ${px2rem(160)};
+  padding-bottom: ${px2rem(60)};
 
   ${MediaQueryBuilder('md', ContainerMD)}
 `;
@@ -38,13 +38,15 @@ const ContentMD = css`
 `;
 
 const ContentLG = css`
-  margin-left: ${px2rem(72)};
+  // margin-left: ${px2rem(72)};
 `;
 
 const Content = styled(LayoutPadding)`
   width: 100%;
-  margin-left: ${px2rem(112)};
+  max-width: 1580px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
   flex: 1;
   justify-content: space-between;

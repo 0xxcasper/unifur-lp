@@ -30,7 +30,10 @@ const BookForm = () => {
     if (!values.description) {
       errors.description = 'Required.';
     }
-    if (values.imageLink && !values.imageLink.startsWith('https://')) {
+
+    if (!values.imageLink) {
+      errors.imageLink = 'Required.';
+    } else if (!values.imageLink.startsWith('https://')) {
       errors.imageLink = 'Image link must be a valid url';
     }
 
@@ -96,14 +99,14 @@ const BookForm = () => {
             <S.HeaderSection>Thông tin sản phẩm</S.HeaderSection>
             <Input
               id="productName"
-              label="Tên sản phẩm (*)"
+              label="Tên sản phẩm"
               onChange={handleChange}
               error={touched.productName && errors.productName}
             />
             <S.Row>
               <Input
                 id="width"
-                label="Ngang (*)"
+                label="Ngang"
                 type="number"
                 onChange={handleChange}
                 error={touched.width && errors.width}
@@ -111,26 +114,30 @@ const BookForm = () => {
               <Input id="deep" label="Sâu" type="number" onChange={handleChange} error={touched.deep && errors.deep} />
               <Input
                 id="height"
-                label="Cao (*)"
+                label="Cao"
+                subLabel={'(cm)'}
                 type="number"
                 onChange={handleChange}
                 error={touched.height && errors.height}
               />
             </S.Row>
             <S.Row>
-              <Input id="color" label="Màu sắc (*)" onChange={handleChange} error={touched.color && errors.color} />
-              <Input id="number" label="Số lượng (*)" onChange={handleChange} error={touched.number && errors.number} />
+              <Input id="color" label="Màu sắc" onChange={handleChange} error={touched.color && errors.color} />
+              <Input id="number" label="Số lượng" onChange={handleChange} error={touched.number && errors.number} />
             </S.Row>
             <Input
               id="description"
               label="Mô tả"
+              isTextArea={true}
+              isRequired={false}
               onChange={handleChange}
               error={touched.description && errors.description}
             />
             <Input
               id="imageLink"
-              label="Link hình ảnh minh hoạ"
+              label="Link hình ảnh mẫu"
               onChange={handleChange}
+              isTextArea={true}
               error={touched.imageLink && errors.imageLink}
             />
             <S.HeaderSection>Thông tin liên hệ</S.HeaderSection>
@@ -138,7 +145,7 @@ const BookForm = () => {
               <Input id="userName" label="Họ tên" onChange={handleChange} error={touched.userName && errors.userName} />
               <Input
                 id="phoneNumber"
-                label="Số điện thoại (*)"
+                label="Số điện thoại"
                 type="tel"
                 onChange={handleChange}
                 error={touched.phoneNumber && errors.phoneNumber}
@@ -147,7 +154,7 @@ const BookForm = () => {
             <S.Row>
               <Input
                 id="email"
-                label="Email (*)"
+                label="Email"
                 type="email"
                 onChange={handleChange}
                 error={touched.email && errors.email}
@@ -156,6 +163,7 @@ const BookForm = () => {
                 id="facebook"
                 label="Facebook"
                 onChange={handleChange}
+                isRequired={false}
                 error={touched.facebook && errors.facebook}
               />
             </S.Row>

@@ -15,7 +15,7 @@ const Container = styled(LayoutPadding)`
   align-items: center;
   justify-content: space-between;
   padding-top: 30px;
-  gap: 240px;
+  gap: 180px;
   max-width: 1580px;
   margin-left: auto;
   margin-right: auto;
@@ -29,10 +29,10 @@ const ProcessListXL = css`
   max-width: 100%;
 `;
 
-const ProcessListXS = css`
+const ProcessListMD = css`
   max-width: 100%;
   .item {
-    width: 80vw !important;
+    width: 75vw !important;
   }
 
   .item-secondary {
@@ -44,8 +44,6 @@ const ProcessList = styled.div`
   gap: 38px;
   display: flex;
   flex-direction: column;
-  ${MediaQueryBuilder('xl', ProcessListXL)}
-  ${MediaQueryBuilder('xs', ProcessListXS)}
   .item {
     color: white;
     width: 500px;
@@ -65,6 +63,8 @@ const ProcessList = styled.div`
     background: rgba(36, 36, 36, 1);
     margin-left: 42px;
   }
+  ${MediaQueryBuilder('md', ProcessListMD)}
+  ${MediaQueryBuilder('xl', ProcessListXL)}
 `;
 
 export { Container, Content, ProcessList };

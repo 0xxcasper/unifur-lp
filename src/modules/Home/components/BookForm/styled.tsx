@@ -51,10 +51,10 @@ const Row = styled.div`
   flex-wrap: wrap;
 `;
 
-const ButtonSubmit = styled(Button)`
+const ButtonSubmit = styled.button`
   margin-top: 32px;
   display: flex;
-  width: 400px;
+  min-width: 380px;
   height: 50px;
   padding: 24px;
   flex-direction: column;

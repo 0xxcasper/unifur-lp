@@ -1,11 +1,14 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import px2rem from '@/utils/px2rem';
 
 const Label = styled.label`
   font-size: 20px;
   font-weight: 500;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.8);
   opacity: 0.8;
+  .required {
+    color: rgba(255, 0, 0, 0.7);
+  }
 `;
 
 const Container = styled.div`
@@ -15,20 +18,46 @@ const Container = styled.div`
   gap: ${px2rem(4)};
 `;
 
-const Input = styled.input`
-  height: 50px;
+const InputCss = css`
   border-radius: 5px;
   font-size: 20px;
   font-weight: 500;
   color: #000000;
   background-color: white;
-  padding: 0 16px;
+  padding: 16px;
+  border: 0;
+  flex: 1;
+`;
+
+const Input = styled.input`
+  height: 50px;
+  ${InputCss}
+`;
+
+const TextArea = styled.textarea`
+  border-radius: 5px;
+  ${InputCss}
 `;
 
 const Error = styled.p`
   font-size: 12px;
   font-weight: 400;
-  color: #ff0000;
+  color: rgba(255, 0, 0, 0.7);
 `;
 
-export { Container, Label, Input, Error };
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: ${px2rem(16)};
+  flex: 1;
+  align-items: end;
+`;
+
+const SubLabel = styled.span`
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+`;
+
+export { Container, Label, Input, Error, TextArea, Row, SubLabel };

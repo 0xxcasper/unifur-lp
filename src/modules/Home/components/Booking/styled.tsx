@@ -15,7 +15,7 @@ const Container = styled(LayoutPadding)`
   align-items: center;
   justify-content: space-between;
   padding-top: 30px;
-  gap: 240px;
+  gap: 180px;
   max-width: 1580px;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +26,7 @@ const BookingInfoXL = css`
   max-width: 100%;
 `;
 const BookingInfo = styled.div`
-  max-width: 30%;
+  //max-width: 30%;
   ${MediaQueryBuilder('xl', BookingInfoXL)}
 `;
 
