@@ -1,5 +1,5 @@
 import * as S from '@/modules/Home/components/Input/styled';
-import React from 'react';
+import React, { useState } from 'react';
 import Dropdown from '@/components/Popover';
 import Text from '@/components/Text';
 import colors1 from '@/json/colors_1.json';
@@ -8,6 +8,8 @@ import colors3 from '@/json/colors_3.json';
 import colors4 from '@/json/colors_4.json';
 import colors5 from '@/json/colors_5.json';
 import ArrowDown from '@/components/Icons/ArrowDown.svg';
+// @ts-ignore
+import InfiniteScroll from 'react-infinite-scroller';
 
 interface IProps {
   label: string;
@@ -26,6 +28,22 @@ export interface IColor {
 const COLORS_LIST = [...colors1, ...colors2, ...colors3, ...colors4, ...colors5];
 
 const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) => {
+  const itemsPerPage = 10;
+  const [hasMore, setHasMore] = useState(true);
+  const [records, setRecords] = useState(itemsPerPage);
+
+  const showItems = COLORS_LIST.slice(0, records);
+
+  const loadMore = () => {
+    if (records === COLORS_LIST.length) {
+      setHasMore(false);
+    } else {
+      setTimeout(() => {
+        setRecords(records + itemsPerPage);
+      }, 2000);
+    }
+  };
+
   const renderItem = (item: { name: string; image: string }) => {
     return (
       <S.ColorItem
@@ -67,7 +85,9 @@ const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) =
         }
         width={450}
       >
-        <S.ColorsContainer>{COLORS_LIST.map(renderItem)}</S.ColorsContainer>
+        <InfiniteScroll pageStart={0} loadMore={loadMore} hasMore={hasMore} useWindow={false}>
+          <S.ColorsContainer>{showItems.map(renderItem)}</S.ColorsContainer>
+        </InfiniteScroll>
       </Dropdown>
     </S.Container>
   );
