@@ -103,6 +103,7 @@ const ColorImage = styled.img<{ small: boolean }>`
   width: 70%;
   max-width: ${props => (props.small ? '150px' : '300px')};
   height: ${props => (props.small ? '35px' : '70px')};
+  border-radius: 4px;
 
   ${MediaQueryBuilder(
     'md',

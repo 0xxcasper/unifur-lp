@@ -26,7 +26,6 @@ export interface IColor {
 }
 
 const COLORS_LIST = [...colors1, ...colors2, ...colors3, ...colors4, ...colors5];
-
 const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) => {
   const itemsPerPage = 10;
   const [hasMore, setHasMore] = useState(true);
