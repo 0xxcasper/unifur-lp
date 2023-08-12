@@ -49,6 +49,12 @@ const Row = styled.div`
   flex-direction: row;
   gap: ${px2rem(32)};
   flex-wrap: wrap;
+  ${MediaQueryBuilder(
+    'xs',
+    css`
+      flex-direction: column;
+    `,
+  )};
 `;
 
 const ButtonSubmit = styled.button`
