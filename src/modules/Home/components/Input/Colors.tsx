@@ -39,7 +39,7 @@ const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) =
     } else {
       setTimeout(() => {
         setRecords(records + itemsPerPage);
-      }, 2000);
+      }, 1000);
     }
   };
 
