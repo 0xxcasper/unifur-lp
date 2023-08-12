@@ -68,7 +68,7 @@ const Row = styled.div`
   flex-direction: row;
   gap: ${px2rem(16)};
   flex: 1;
-  align-items: end;
+  //align-items: end;
 `;
 
 const SubLabel = styled.span`
@@ -83,7 +83,7 @@ const ColorsContainer = styled.div`
   flex-direction: column;
   height: 350px;
   width: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
   gap: ${px2rem(16)};
 `;
 
@@ -101,8 +101,8 @@ const ColorItem = styled.div`
 `;
 
 const ColorImage = styled.img<{ small: boolean }>`
-  width: 50%;
-  max-width: ${props => (props.small ? '150px' : '300px')};
+  width: 40%;
+  max-width: ${props => (props.small ? '150px' : '220px')};
   height: ${props => (props.small ? '35px' : '70px')};
   border-radius: 4px;
 

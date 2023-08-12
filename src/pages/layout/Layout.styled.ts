@@ -28,7 +28,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1920px;
+  //max-width: 1920px;
 `;
 
 export { Container, LayoutPadding };

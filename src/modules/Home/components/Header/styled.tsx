@@ -90,7 +90,7 @@ const MainSectionMD = css`
 const MainSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${px2rem(32)};
+  gap: ${px2rem(24)};
   .main-text {
     white-space: pre-line;
   }

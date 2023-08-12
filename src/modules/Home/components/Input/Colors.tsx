@@ -75,6 +75,7 @@ const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) =
               <S.ColorItem key={selectedColor.name}>
                 <S.ColorImage src={selectedColor.image} small={true} />
                 <Text fontWeight="semibold">{selectedColor.name}</Text>
+                <S.ImgArrowDown src={ArrowDown} alt="arrow down" />
               </S.ColorItem>
             ) : (
               <>

@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 import React from 'react';
 import { IColor } from '@/modules/Home/components/Input/Colors';
 import Wood from '@/modules/Home/components/Input/Wood';
+import { sendMessage } from '@/services/telegram';
 
 const BookForm = () => {
   const validateForm = (values: IFormValues): Record<string, string> => {
@@ -64,7 +65,8 @@ const BookForm = () => {
   };
   const handleSubmit = async (values: IFormValues) => {
     try {
-      await addData(values);
+      const orderID = await addData(values);
+      sendMessage(values, orderID);
       toast.success('Đặt hàng thành công');
     } catch (error) {
       console.log(error);

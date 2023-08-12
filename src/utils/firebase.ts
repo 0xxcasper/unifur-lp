@@ -48,9 +48,10 @@ export interface IFormValues {
 
 const addData = async (data: IFormValues) => {
   const user = getUserCollection();
-  await addDoc(user, {
+  const response = await addDoc(user, {
     ...data,
   });
+  return response.id;
 };
 
 export { setupFirebase, addData };
