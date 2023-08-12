@@ -50,7 +50,7 @@ const Row = styled.div`
   gap: ${px2rem(32)};
   flex-wrap: wrap;
   ${MediaQueryBuilder(
-    'xs',
+    'md',
     css`
       flex-direction: column;
     `,
