@@ -153,7 +153,13 @@ const BookForm = () => {
                   formik.setFieldValue('woodType', item);
                 }}
               />
-              <Input id="number" label="Số lượng" onChange={handleChange} error={touched.number && errors.number} />
+              <Input
+                id="number"
+                label="Số lượng"
+                type="number"
+                onChange={handleChange}
+                error={touched.number && errors.number}
+              />
             </S.Row>
             <Input
               id="description"
