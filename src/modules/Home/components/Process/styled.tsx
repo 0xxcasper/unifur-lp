@@ -3,7 +3,7 @@ import { LayoutPadding } from '@/pages/layout';
 import { MediaQueryBuilder } from '@/theme';
 
 const ContainerMD = css`
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 40px;
   margin-top: 24px;
   max-width: none;
@@ -23,7 +23,16 @@ const Container = styled(LayoutPadding)`
   ${MediaQueryBuilder('md', ContainerMD)}
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+  ${MediaQueryBuilder(
+    'md',
+    css`
+      .title {
+        text-align: center;
+      }
+    `,
+  )}
+`;
 
 const ProcessListXL = css`
   max-width: 100%;

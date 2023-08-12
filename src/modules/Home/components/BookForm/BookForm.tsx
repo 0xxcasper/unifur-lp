@@ -6,6 +6,7 @@ import { addData, IFormValues } from '@/utils/firebase';
 import toast from 'react-hot-toast';
 import React from 'react';
 import { IColor } from '@/modules/Home/components/Input/Colors';
+import Wood from '@/modules/Home/components/Input/Wood';
 
 const BookForm = () => {
   const validateForm = (values: IFormValues): Record<string, string> => {
@@ -55,6 +56,10 @@ const BookForm = () => {
       errors.email = 'Email must be a valid email';
     }
 
+    if (!values.woodType) {
+      errors.woodType = 'Required.';
+    }
+
     return errors;
   };
   const handleSubmit = async (values: IFormValues) => {
@@ -82,6 +87,7 @@ const BookForm = () => {
       phoneNumber: '',
       email: '',
       facebook: '',
+      woodType: '',
     } as IFormValues,
     onSubmit: handleSubmit,
     validate: validateForm,
@@ -134,6 +140,15 @@ const BookForm = () => {
                 selectedColor={{
                   name: formik.values.color,
                   image: formik.values.colorImage,
+                }}
+              />
+              <Wood
+                label="Loại ván gỗ"
+                isRequired={true}
+                error={touched.woodType && errors.woodType}
+                selected={formik.values.woodType}
+                onChange={(item: string) => {
+                  formik.setFieldValue('woodType', item);
                 }}
               />
               <Input id="number" label="Số lượng" onChange={handleChange} error={touched.number && errors.number} />

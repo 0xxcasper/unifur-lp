@@ -55,7 +55,7 @@ const Content = styled(LayoutPadding)`
 `;
 
 const AppLogo = styled.img`
-  width: 244px;
+  width: 220px;
   height: 32px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -76,7 +76,7 @@ const ShadowText = styled.div`
   font-weight: 700;
   line-height: normal;
   color: #ffffff;
-  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000, 1px 1px #000000, -1px -1px #000000,
+  text-shadow: 1px 0 #000000, -1px 0 #000000, 0 1px #000000, 0 -1px #000000, 1px 1px #000000, -1px -1px #000000,
     1px -1px #000000, -1px 1px #000000;
   ${MediaQueryBuilder('md', ShadowTextMD)}
 `;
@@ -108,7 +108,7 @@ const Action = styled.div`
     padding: 12px 24px;
     color: ${({ theme }) => theme['txt-parallel']};
     border-radius: ${px2rem(12)};
-    font-size: 18px;
+    font-size: 16px;
     min-width: 180px;
     text-align: center;
   }

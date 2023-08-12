@@ -14,7 +14,7 @@ const Container = styled(LayoutPadding)`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 42px;
   gap: 180px;
   max-width: 1580px;
   margin-left: auto;
@@ -26,7 +26,16 @@ const BookingInfoXL = css`
   max-width: 100%;
 `;
 const BookingInfo = styled.div`
-  //max-width: 30%;
+  .title {
+  }
+  ${MediaQueryBuilder(
+    'md',
+    css`
+      .title {
+        text-align: center;
+      }
+    `,
+  )}
   ${MediaQueryBuilder('xl', BookingInfoXL)}
 `;
 
@@ -39,7 +48,7 @@ const BookingCategories = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 42px;
-  max-width: 550px;
+  max-width: 500px;
   .item-one {
     background: #556652;
     box-shadow: 36px 50px 75px 0 rgba(69, 96, 64, 0.22);

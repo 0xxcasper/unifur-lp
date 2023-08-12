@@ -54,7 +54,7 @@ const Booking = () => {
   return (
     <S.Container>
       <S.BookingInfo>
-        <Text size="56" fontWeight="medium">
+        <Text size="56" fontWeight="semibold" className="title">
           Đặt hàng theo yêu cầu
         </Text>
         <Text size="20" color="txt-secondary" className="mt-24 mb-24">

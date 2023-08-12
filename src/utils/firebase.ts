@@ -38,6 +38,7 @@ export interface IFormValues {
   number: string;
   description: string;
   imageLink: string;
+  woodType: string;
 
   userName: string;
   phoneNumber: string;

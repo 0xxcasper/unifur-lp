@@ -10,7 +10,7 @@ const Header = () => {
         <S.Content>
           <S.AppLogo src={Logo} alt="app-logo" />
           <S.MainSection>
-            <Text color="txt-primary" size="72" fontWeight="regular" className="main-text">
+            <Text color="txt-primary" size="72" fontWeight="medium" className="main-text">
               NỘI THẤT ĐA NĂNG
             </Text>
             <S.ShadowText>tối đa hóa</S.ShadowText>

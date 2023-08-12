@@ -94,6 +94,7 @@ const ColorItem = styled.div`
   cursor: pointer;
   gap: 16px;
   flex: 1;
+  position: relative;
   :hover {
     opacity: 0.8;
   }
@@ -113,6 +114,20 @@ const ColorImage = styled.img<{ small: boolean }>`
   )}
 `;
 
+const WoodContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: ${px2rem(16)};
+`;
+
+const ImgArrowDown = styled.img`
+  width: 14px;
+  align-items: end;
+  position: absolute;
+  right: 0;
+`;
+
 export {
   Container,
   Label,
@@ -125,4 +140,6 @@ export {
   ColorsContainer,
   ColorItem,
   ColorImage,
+  WoodContainer,
+  ImgArrowDown,
 };

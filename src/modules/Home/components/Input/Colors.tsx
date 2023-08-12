@@ -78,7 +78,7 @@ const Colors = ({ label, isRequired = true, selectedColor, onChange }: IProps) =
               </S.ColorItem>
             ) : (
               <>
-                <Text>Chọn màu</Text>
+                <Text style={{ opacity: 0.6 }}>Chọn màu</Text>
                 <img src={ArrowDown} width="14px" alt="arrow down" />
               </>
             )}

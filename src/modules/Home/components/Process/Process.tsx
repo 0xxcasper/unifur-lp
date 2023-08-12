@@ -55,7 +55,7 @@ const Process = () => {
     <S.Container>
       <S.ProcessList>{PROCESS_LIST.map(renderProcess)}</S.ProcessList>
       <S.Content>
-        <Text size="56" fontWeight="semibold">
+        <Text size="56" fontWeight="semibold" className="title">
           Quy trình thực hiện
         </Text>
         <Text size="20" color="txt-secondary" className="mt-24 mb-24">
