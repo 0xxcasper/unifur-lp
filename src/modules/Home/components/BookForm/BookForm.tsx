@@ -34,9 +34,7 @@ const BookForm = () => {
       errors.description = 'Required.';
     }
 
-    if (!values.imageLink) {
-      errors.imageLink = 'Required.';
-    } else if (!values.imageLink.startsWith('https://')) {
+    if (values.imageLink && values.imageLink.startsWith('https://')) {
       errors.imageLink = 'Image link must be a valid url';
     }
 
@@ -174,6 +172,7 @@ const BookForm = () => {
               label="Link hình ảnh mẫu"
               onChange={handleChange}
               isTextArea={true}
+              isRequired={false}
               error={touched.imageLink && errors.imageLink}
             />
             <S.HeaderSection>Thông tin liên hệ</S.HeaderSection>
