@@ -8,7 +8,13 @@ const Header = () => {
       <S.Background />
       <S.Container>
         <S.Content>
-          <S.AppLogo src={Logo} alt="app-logo" />
+          <S.AppLogo
+            src={Logo}
+            alt="app-logo"
+            onClick={() => {
+              window.open('https://unifur.store/', '_blank');
+            }}
+          />
           <S.MainSection>
             <Text color="txt-primary" size="72" fontWeight="medium" className="main-text">
               NỘI THẤT ĐA NĂNG
